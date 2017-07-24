@@ -28,8 +28,7 @@ LOCAL_C_INCLUDES += $(LOCAL_PATH)/libtommath
 LOCAL_C_INCLUDES += $(LOCAL_PATH)/libtomcrypt/src/headers
 LOCAL_CFLAGS += -DDROPBEAR_CLIENT
 
-# we will build openssh version instead
-# include $(BUILD_EXECUTABLE)
+include $(BUILD_EXECUTABLE)
 
 include $(CLEAR_VARS)
 
@@ -47,8 +46,7 @@ LOCAL_C_INCLUDES += $(LOCAL_PATH)/libtommath
 LOCAL_C_INCLUDES += $(LOCAL_PATH)/libtomcrypt/src/headers
 LOCAL_CFLAGS += -DDROPBEAR_CLIENT -DPROGRESS_METER
 
-# we will build openssh version instead
-# include $(BUILD_EXECUTABLE)
+include $(BUILD_EXECUTABLE)
 
 
 include $(call all-makefiles-under,$(LOCAL_PATH))
