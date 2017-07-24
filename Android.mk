@@ -1,5 +1,3 @@
-ifneq ($(TARGET_SIMULATOR),true)
-
 LOCAL_PATH:= $(call my-dir)
 include $(CLEAR_VARS)
 
@@ -82,7 +80,7 @@ LOCAL_SRC_FILES+=\
 
 
 LOCAL_STATIC_LIBRARIES := libtommath libtomcrypt
-LOCAL_SHARED_LIBRARIES := \
+#LOCAL_SHARED_LIBRARIES := \
 	libutils \
 	libcutils \
 	libc
@@ -121,8 +119,6 @@ LOCAL_C_INCLUDES += $(LOCAL_PATH)/libtomcrypt/src/headers
 LOCAL_CFLAGS += -DDROPBEAR_SERVER
 
 include $(BUILD_EXECUTABLE)
-
-endif  # TARGET_SIMULATOR != true
 
 ############################################################
 
